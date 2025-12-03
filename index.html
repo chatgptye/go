@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>متجر الاشتراكات اليمني | اشتراكات رقمية في اليمن 24/7</title>
+  <meta name="description" content="متجر يمني متخصص في بيع وتفعيل الاشتراكات الرقمية مثل ChatGPT Plus و Canva Pro و Duolingo Super و Gemini و CapCut Pro داخل اليمن، بأسعار مناسبة وتفعيل سريع عبر الواتساب.">
+  <link rel="preload" href="images/chatgpt.jpg" as="image">
+
+  <style>
+    /* -------------------- Reset بسيط و إعدادات عامة -------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-bg: #f1f5f9;
+      --color-surface: #ffffff;
+      --color-surface-soft: #f8fafc;
+      --color-backdrop: #00000040;
+
+      --color-border: #e2e8f0;
+      --color-border-soft: #cbd5f5;
+
+      --color-footer-bg: #020617;
+      --color-footer-soft: #02081a;
+      --color-footer-text: #e5f0ff;
+
+      --color-primary: #0ea5e9;
+      --color-primary-dark: #0284c7;
+      --color-primary-soft: #38bdf8;
+      --color-accent: #22c55e;
+      --color-accent-dark: #16a34a;
+      --color-success: #22c55e;
+
+      --color-text-main: #0f172a;
+      --color-text-sub: #475569;
+
+      --color-hero-bg: radial-gradient(circle at 0 0, #e0f2fe, #ecfeff);
+
+      --radius-card: 18px;
+      --radius-pill: 999px;
+
+      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --shadow-card: 0 14px 32px rgba(15, 23, 42, 0.08);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto !important;
+      }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text-main);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .no-scroll {
+      overflow: hidden;
+    }
+
+    /* -------------------- أيقونات عامة -------------------- */
+    .icon {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+    .icon-sm {
+      width: 14px;
+      height: 14px;
+    }
+    .icon-lg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* -------------------- الهيدر -------------------- */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      background: var(--color-surface);
+      border-bottom: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      font-size: 0.95rem;
+    }
+
+    .logo-img-wrap {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-surface-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .logo-img {
+      max-width: 28px;
+      max-height: 28px;
+    }
+
+    .icon-btn {
+      border-radius: 10px;
+      border: 1px solid var(--color-border-soft);
+      background: var(--color-surface);
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .icon-btn .icon {
+      stroke: var(--color-text-main);
+      stroke-width: 2;
+    }
+
+    .icon-btn:active {
+      background: var(--color-surface-soft);
+      border-color: var(--color-border);
+    }
+
+    /* -------------------- الأقسام العامة -------------------- */
+    .section {
+      padding: 1.5rem 1.2rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 1.4rem;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--color-text-sub);
+    }
+
+    /* -------------------- الهيرو -------------------- */
+    .hero {
+      max-width: 640px;
+      background: var(--color-hero-bg);
+      border-radius: 24px;
+      padding: 1.6rem 1.4rem 2rem;
+      margin-top: 1.2rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: var(--radius-pill);
+      background: var(--color-surface);
+      font-size: 0.78rem;
+      color: var(--color-text-sub);
+      border: 1px solid var(--color-border);
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-success);
+      flex-shrink: 0;
+    }
+
+    .hero-title-main {
+      margin-top: 1.3rem;
+      font-size: 1.6rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .hero-title-sub {
+      margin-top: 0.3rem;
+      font-size: 1.3rem;
+      color: var(--color-primary-dark);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .hero-title-sub span {
+      font-size: 1.45rem;
+      color: var(--color-text-main);
+    }
+
+    .hero-text {
+      margin-top: 0.9rem;
+      font-size: 0.9rem;
+      color: var(--color-text-sub);
+      text-align: center;
+    }
+
+    /* -------------------- الأزرار -------------------- */
+    .hero-actions {
+      margin-top: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-size: 0.9rem;
+      gap: 0.35rem;
+      background: transparent;
+      color: var(--color-text-main);
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+    }
+
+    .btn .icon {
+      width: 18px;
+      height: 18px;
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+      color: #ffffff;
+      border-color: var(--color-primary);
+    }
+
+    .btn-primary:active {
+      background: var(--color-primary-dark);
+      border-color: var(--color-primary-dark);
+    }
+
+    .btn-outline {
+      background: var(--color-surface);
+      color: #036672;
+      border-color: var(--color-border-soft);
+    }
+
+    .btn-outline:active {
+      background: #e0fbf7;
+    }
+
+    .btn-whatsapp {
+      background: var(--color-accent);
+      color: #ffffff;
+      border-color: var(--color-accent);
+    }
+
+    .btn-whatsapp:active {
+      background: var(--color-accent-dark);
+      border-color: var(--color-accent-dark);
+    }
+
+    /* -------------------- ميتا الهيرو -------------------- */
+    .hero-meta {
+      margin-top: 1.4rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: #64748b;
+    }
+
+    .meta-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .icon-circle {
+      width: 22px;
+      height: 22px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--color-border-soft);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-surface);
+      color: var(--color-primary-dark);
+      flex-shrink: 0;
+    }
+
+    .icon-circle .icon {
+      width: 14px;
+      height: 14px;
+    }
+
+    /* -------------------- التبويبات -------------------- */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      margin-bottom: 1.4rem;
+    }
+
+    .chip,
+    .chip-soft {
+      border-radius: var(--radius-pill);
+      font-size: 0.86rem;
+      border: 1px solid var(--color-border-soft);
+      background: var(--color-surface);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .chip {
+      padding: 0.45rem 1.2rem;
+      outline: none;
+    }
+
+    .chip-active {
+      background: var(--color-primary);
+      color: #ffffff;
+      border-color: var(--color-primary);
+    }
+
+    .chip-soft {
+      padding: 0.3rem 0.9rem;
+      font-size: 0.78rem;
+      background: var(--color-surface-soft);
+      color: var(--color-text-main);
+      cursor: default;
+    }
+
+    /* -------------------- بطاقة عامة -------------------- */
+    .card {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--color-border);
+    }
+
+    .card-shadow {
+      box-shadow: var(--shadow-soft);
+    }
+
+    /* -------------------- بطاقة الاشتراك -------------------- */
+    .sub-card {
+      overflow: hidden;
+    }
+
+    .sub-card-media {
+      padding: 1.1rem 1.1rem 0;
+    }
+
+    .sub-card-media-inner {
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--color-surface-soft);
+    }
+
+    .sub-card-body {
+      padding: 1.3rem 1.4rem 1.4rem;
+      text-align: center;
+    }
+
+    .sub-card-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
+    }
+
+    .sub-card-type {
+      font-size: 0.85rem;
+      color: var(--color-primary-dark);
+      margin-bottom: 0.7rem;
+    }
+
+    .sub-card-type span {
+      font-weight: 600;
+      margin-left: 0.15rem;
+    }
+
+    .sub-card-text {
+      font-size: 0.88rem;
+      color: var(--color-text-sub);
+      margin-bottom: 1rem;
+    }
+
+    .sub-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 1.1rem;
+    }
+
+    .sub-card-btn .icon {
+      transform: scaleX(-1);
+    }
+
+    /* -------------------- قسم المميزات -------------------- */
+    .features-header {
+      margin-bottom: 1.6rem;
+    }
+
+    .features-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.3rem 0.9rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.78rem;
+      color: var(--color-primary-dark);
+      background: #e0f2fe;
+      border: 1px solid var(--color-border-soft);
+      margin-bottom: 0.6rem;
+    }
+
+    .features-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .feature-card {
+      border-radius: 22px;
+      padding: 1.6rem 1.8rem;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--color-border-soft);
+      background: linear-gradient(135deg, #ffffff, #f5fbff);
+    }
+
+    .feature-card--primary {
+      background: linear-gradient(135deg, #e0f2fe, #f5fbff);
+      border-color: #bfdbfe;
+    }
+
+    .feature-card--bolt {
+      background: linear-gradient(135deg, #eef2ff, #f5fbff);
+    }
+
+    .feature-card--price {
+      background: linear-gradient(135deg, #fef3c7, #fff7ed);
+      border-color: #fde68a;
+    }
+
+    .feature-icon-box {
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      margin: 0 auto 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--color-primary-dark);
+    }
+
+    .feature-icon-box--price {
+      color: #b45309;
+    }
+
+    .feature-title {
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      font-size: 0.98rem;
+    }
+
+    .feature-text {
+      font-size: 0.88rem;
+      color: var(--color-text-sub);
+    }
+
+    /* -------------------- عنّا (من نحن، الرؤية، الرسالة...) -------------------- */
+    .about-intro {
+      font-size: 0.9rem;
+      color: var(--color-text-sub);
+      margin-bottom: 1.6rem;
+      text-align: right;
+    }
+
+    .about-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.3rem;
+    }
+
+    .about-card {
+      border-radius: var(--radius-card);
+      border: 1px solid var(--color-border);
+      padding: 1.4rem 1.6rem;
+      box-shadow: var(--shadow-soft);
+      cursor: pointer;
+      position: relative;
+      background: var(--color-surface);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+    }
+
+    .about-card--active {
+      border-top: 3px solid var(--color-primary-dark);
+      border-color: var(--color-primary-dark);
+      box-shadow: var(--shadow-card);
+      transform: translateY(-1px);
+    }
+
+    .about-card-title {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      text-align: right;
+    }
+
+    .about-card-text {
+      font-size: 0.88rem;
+      color: var(--color-text-sub);
+      text-align: right;
+    }
+
+    .about-icon-wrap {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 0 auto 0.9rem;
+      background: #dbeafe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary-dark);
+    }
+
+    .about-icon-wrap--green {
+      background: #dcfce7;
+      color: var(--color-accent-dark);
+    }
+
+    .about-icon-wrap .icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .about-card--who {
+      background: linear-gradient(135deg, #0ea5e9, #1d4ed8);
+      border-color: #bfdbfe;
+      color: #ffffff;
+    }
+
+    .about-card--who .about-card-title {
+      color: #ffffff;
+    }
+
+    .about-card--who .about-card-text {
+      color: #e0f2ff;
+    }
+
+    /* -------------------- قسم آراء العملاء -------------------- */
+    .testimonials {
+      margin-top: 1.8rem;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .testimonials-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+    }
+
+    .testimonials-subtitle {
+      font-size: 0.88rem;
+      color: var(--color-text-sub);
+    }
+
+    .testimonials-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .testimonial-card {
+      background: var(--color-surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-soft);
+      padding: 1.1rem 1.3rem;
+      text-align: right;
+    }
+
+    .testimonial-name {
+      font-weight: 800;
+      font-size: 0.95rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .testimonial-role {
+      font-size: 0.8rem;
+      color: var(--color-primary-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .testimonial-stars {
+      font-size: 0.8rem;
+      color: #f97316;
+      margin-bottom: 0.45rem;
+    }
+
+    .testimonial-text {
+      font-size: 0.86rem;
+      color: var(--color-text-sub);
+    }
+
+    /* -------------------- خطوات الطلب -------------------- */
+    .steps-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .step-card {
+      text-align: center;
+      padding: 1.4rem 1.6rem 1.6rem;
+      border-radius: 24px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-soft);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .step-circle {
+      width: 90px;
+      height: 90px;
+      margin: -2.2rem auto 1rem;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #ffffff, #0ea5e9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.3);
+      border: 4px solid var(--color-surface);
+    }
+
+    .step-number {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .step-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
+    }
+
+    .step-text {
+      font-size: 0.88rem;
+      color: var(--color-text-sub);
+    }
+
+    /* -------------------- الجمهور المستهدف -------------------- */
+    #audience .section-header {
+      margin-bottom: 1.4rem;
+    }
+
+    .audience-description {
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+
+    .audience-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .audience-card {
+      padding: 1.3rem 1.5rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .audience-title {
+      font-size: 0.98rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      text-align: right;
+    }
+
+    .audience-text {
+      font-size: 0.88rem;
+      color: var(--color-text-sub);
+      text-align: right;
+    }
+
+    /* -------------------- القائمة الجانبية (Drawer) -------------------- */
+    .backdrop {
+      position: fixed;
+      inset: 0;
+      background: var(--color-backdrop);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s ease;
+      z-index: 20;
+    }
+    .backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 80%;
+      max-width: 320px;
+      background: var(--color-surface);
+      border-left: 1px solid var(--color-border);
+      transform: translateX(100%);
+      transition: transform 0.2s ease;
+      z-index: 30;
+      display: flex;
+      flex-direction: column;
+      padding: 1.1rem 1.2rem;
+    }
+
+    .drawer.open {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.2rem;
+    }
+
+    .drawer-header .logo-text {
+      color: var(--color-primary-dark);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .drawer-nav {
+      list-style: none;
+      margin-bottom: 1.8rem;
+    }
+    .drawer-nav li {
+      margin-bottom: 0.9rem;
+    }
+    .drawer-nav a {
+      font-size: 0.9rem;
+      color: var(--color-text-main);
+    }
+    .drawer-nav a:active {
+      color: var(--color-primary-dark);
+    }
+
+    .drawer-footer {
+      margin-top: auto;
+    }
+
+    /* -------------------- CTA أسفل الصفحة -------------------- */
+    .footer-cta {
+      background:
+        radial-gradient(circle at 0 0, #22c55e44, transparent),
+        radial-gradient(circle at 100% 100%, #0ea5e944, transparent),
+        #020617;
+      color: #e5f0ff;
+      text-align: center;
+      padding: 2.2rem 1.4rem 2.6rem;
+    }
+
+    .footer-cta-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-cta-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 0.7rem;
+    }
+
+    .footer-cta-text {
+      font-size: 0.9rem;
+      color: #cbd5f5;
+      margin-bottom: 1.4rem;
+    }
+
+    .footer-cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-cta-actions .btn {
+      min-width: 210px;
+    }
+
+    .footer-cta-actions .btn-outline {
+      background: transparent;
+      color: #e5f0ff;
+      border-color: #38bdf8;
+    }
+
+    .footer-cta-actions .btn-outline:active {
+      background: #0f172a;
+    }
+
+    /* -------------------- الفوتر -------------------- */
+    .footer {
+      background: var(--color-footer-bg);
+      color: var(--color-footer-text);
+      padding: 2.2rem 1.4rem 1.4rem;
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand-title {
+      font-weight: 800;
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-brand-text {
+      font-size: 0.88rem;
+      color: #cbd5f5;
+    }
+
+    .footer-cols {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .footer-col-title {
+      font-size: 0.9rem;
+      font-weight: 800;
+      margin-bottom: 0.7rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      font-size: 0.86rem;
+    }
+
+    .footer-links li + li {
+      margin-top: 0.4rem;
+    }
+
+    .footer-links a {
+      color: #cbd5f5;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover {
+      color: #38bdf8;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.45rem;
+      font-size: 0.86rem;
+      color: #cbd5f5;
+    }
+
+    .footer-contact-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 1px solid #1e293b;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.8rem;
+    }
+
+    .footer-social-link {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: var(--color-footer-soft);
+      border: 1px solid #1e293b;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #e5f0ff;
+      transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .footer-social-link .icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .footer-social-link:hover {
+      background: #0f172a;
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #111827;
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      text-align: center;
+    }
+
+    /* -------------------- أزرار عائمة (كل زر في جهة) -------------------- */
+    .float-btn {
+      border-radius: 999px;
+      padding: 0.55rem 1.1rem;
+      border: none;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
+      color: #fff;
+      background: #0f172a;
+      transition: transform 0.1s ease, opacity 0.15s ease;
+    }
+
+    .float-btn .icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    .float-btn:active {
+      transform: translateY(1px);
+    }
+
+    .float-btn-whatsapp {
+      background: #22c55e;
+    }
+
+    /* زر الرجوع للأعلى دائري */
+    .float-btn-top {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      background: #0f172a;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 1.3rem;
+      left: 1.1rem;
+      z-index: 60;
+    }
+
+    .floating-top {
+      position: fixed;
+      bottom: 1.3rem;
+      right: 1.1rem;
+      z-index: 60;
+    }
+
+    /* -------------------- استجابة الشاشات الكبيرة -------------------- */
+    @media (min-width: 768px) {
+      .hero {
+        margin-top: 0.5rem;
+      }
+      .hero-title-main {
+        text-align: right;
+        font-size: 2rem;
+      }
+      .hero-title-sub {
+        text-align: right;
+        font-size: 1.6rem;
+      }
+      .hero-text {
+        text-align: right;
+      }
+      .hero-actions {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+      .hero-actions .btn {
+        min-width: 190px;
+      }
+      #openMenu {
+        display: none;
+      }
+      .section {
+        padding-inline: 1rem;
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.2rem;
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.3rem;
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.2rem;
+      }
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.8rem 1.6rem;
+      }
+      .audience-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.2rem;
+      }
+      .footer-cta-title {
+        font-size: 1.7rem;
+      }
+      .footer-cta-actions {
+        flex-direction: row;
+      }
+      .footer-top {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .footer-cols {
+        flex-direction: row;
+      }
+      .footer-col {
+        min-width: 150px;
+      }
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: right;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sprite الأيقونات -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M4 7h16M4 12h16M4 17h10" />
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M6 18L18 6" />
+    </symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24">
+      <path d="M6 7h12l-1.2 9.2A2 2 0 0 1 14.8 18H9.2A2 2 0 0 1 7.2 16.2L6 7Z" />
+      <path d="M9 7l1.5-3h3L15 7" />
+    </symbol>
+    <symbol id="i-message" viewBox="0 0 24 24">
+      <path d="M6 3h12a1 1 0 0 1 1 1v9.5a1 1 0 0 1-1 1H10L6.5 18v-3.5H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" />
+      <path d="M10 8h6M10 11h3" />
+    </symbol>
+    <symbol id="i-shield-check" viewBox="0 0 24 24">
+      <path d="M12 4 6 6v5c0 3.5 2.3 6.8 6 8 3.7-1.2 6-4.5 6-8V6l-6-2Z" />
+      <path d="m9.5 12.2 1.7 1.7L15 10" />
+    </symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24">
+      <path d="M11 3 6 13h4l-1 8 7-11h-4l2-7Z" />
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24">
+      <path d="M6 6h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-5l-3.5 3-0.5-3H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
+      <path d="M9 11h6" />
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path d="M12 3a8 8 0 0 0-6.9 11.9L4 21l6.3-1.9A8 8 0 1 0 12 3Z" />
+      <path d="M9.5 9.5c0 .3.1.6.2.8.3.5.8 1.1 1.4 1.7.6.6 1.2 1.1 1.7 1.4.3.2.5.2.8.3.2 0 .4 0 .6-.2l.8-.6c.1-.1.3-.2.4-.2.1 0 .3 0 .4.2l.7 1.2c.1.2.1.4 0 .6-.3.5-.8 1-1.4 1.2-.7.2-1.8.2-3.1-.4-1.1-.5-2.3-1.4-3.4-2.5-1-1.1-1.9-2.3-2.5-3.4-.6-1.3-.7-2.4-.4-3.1.2-.6.7-1.1 1.2-1.4.2-.1.4-.1.6 0l1.2.7c.2.1.2.3.2.4s-.1.3-.2.4l-.6.8c-.1.1-.2.4-.2.6Z" />
+    </symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24">
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24">
+      <path d="M2.5 12.1S5.5 6 12 6s9.5 6.1 9.5 6.1S18.5 18.2 12 18.2 2.5 12.1 2.5 12.1Z" />
+      <circle cx="12" cy="12.1" r="2.6" />
+    </symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24">
+      <path d="M6 4v16" />
+      <path d="M6 5h9l-3 3 3 3H6" />
+    </symbol>
+    <symbol id="i-handshake" viewBox="0 0 24 24">
+      <path d="M8 9.5 11 7a2.5 2.5 0 0 1 3 0l2.5 2" />
+      <path d="M3 9l4.5-3.5 3.5 3" />
+      <path d="M21 9l-4.5-3.5-1.5 1.2" />
+      <path d="M5 10.5 3 12l3 4a2 2 0 0 0 2.6.4L10 15" />
+      <path d="m14 15 1.5 1.5A2 2 0 0 0 18 16l3-4-2-1.5" />
+      <path d="m10 15 1.3 1.3a1.8 1.8 0 0 0 2.4 0L14 15" />
+    </symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24">
+      <path d="M4 11V4h7l9 9-7 7-9-9z" />
+      <circle cx="9" cy="8.5" r="1.6" />
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="4" ry="4"/>
+      <circle cx="12" cy="12" r="3.2"/>
+      <circle cx="17" cy="7" r="1.1"/>
+    </symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24">
+      <path d="M9 4h3.5A3.5 3.5 0 0 1 16 7.5V9h-2.2a.8.8 0 0 0-.8.8V12H16l-.4 3H13v5H10v-5H8v-3h2v-2.2A3.8 3.8 0 0 1 13.8 6H16V4h-3.5Z"/>
+    </symbol>
+  </svg>
+
+  <!-- الهيدر -->
+  <header class="topbar">
+    <div class="logo">
+      <span class="logo-img-wrap">
+        <img src="images/logo.png" alt="شعار متجر الاشتراكات اليمني" class="logo-img" loading="lazy">
+      </span>
+      <span class="logo-text">متجر الاشتراكات اليمني</span>
+    </div>
+
+    <button class="icon-btn" id="openMenu" aria-label="فتح القائمة">
+      <svg class="icon icon-lg" aria-hidden="true">
+        <use href="#i-menu"></use>
+      </svg>
+    </button>
+  </header>
+
+  <main>
+    <!-- الهيرو -->
+    <section class="section hero">
+      <div class="badge">
+        نخدم اليمن على مدار الساعة
+        <span class="badge-dot"></span>
+      </div>
+
+      <h1 class="hero-title-main">متجر الاشتراكات اليمني</h1>
+      <h2 class="hero-title-sub">
+        اشتراكات رقمية في اليمن <span>24/7</span>
+      </h2>
+
+      <p class="hero-text">
+        متجر يمني يوفر اشتراكات رقمية مثل ChatGPT و Canva و Duolingo و Gemini و CapCut بتفعيل سريع وطرق دفع محلية.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#subscriptions" class="btn btn-primary">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-cart"></use>
+          </svg>
+          <span>تصفح الاشتراكات</span>
+        </a>
+
+        <a href="https://wa.me/" class="btn btn-outline" rel="noopener" target="_blank">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-message"></use>
+          </svg>
+          <span>تواصل عبر واتساب</span>
+        </a>
+      </div>
+
+      <div class="hero-meta">
+        <div class="meta-item">
+          <span class="icon-circle">
+            <svg class="icon icon-sm" aria-hidden="true">
+              <use href="#i-shield-check"></use>
+            </svg>
+          </span>
+          <span>ضمان التفعيل</span>
+        </div>
+        <div class="meta-item">
+          <span class="icon-circle">
+            <svg class="icon icon-sm" aria-hidden="true">
+              <use href="#i-bolt"></use>
+            </svg>
+          </span>
+          <span>تفعيل سريع</span>
+        </div>
+        <div class="meta-item">
+          <span class="icon-circle">
+            <svg class="icon icon-sm" aria-hidden="true">
+              <use href="#i-chat"></use>
+            </svg>
+          </span>
+          <span>دعم 24/7</span>
+        </div>
+      </div>
+
+      <p class="hero-text" style="margin-top:.6rem;font-size:.82rem;">
+        طرق الدفع المتاحة: حوالات بنك الكريمي + المحافظ الإلكترونية داخل اليمن. تفاصيل الحساب تُرسل بعد الطلب عبر الواتساب.
+      </p>
+    </section>
+
+    <!-- قسم الاشتراكات -->
+    <section class="section" id="subscriptions">
+      <header class="section-header">
+        <h2 class="section-title">أشهر الاشتراكات المتوفرة لدينا</h2>
+        <p class="section-subtitle">
+          اختر الاشتراك المناسب لاحتياجاتك واحصل على تفعيل فوري.
+        </p>
+      </header>
+
+      <div class="chips" id="planTabs">
+        <button class="chip" data-plan="gemini">Gemini</button>
+        <button class="chip" data-plan="duolingo">Duolingo</button>
+        <button class="chip" data-plan="canva">Canva Pro</button>
+        <button class="chip chip-active" data-plan="chatgpt">ChatGPT Plus</button>
+        <button class="chip" data-plan="capcut">CapCut Pro</button>
+      </div>
+
+      <article class="card card-shadow sub-card" id="planCard">
+        <div class="sub-card-media">
+          <div class="sub-card-media-inner">
+            <img
+              id="planImage"
+              src="images/chatgpt.jpg"
+              alt="صورة اشتراك ChatGPT Plus"
+              class="sub-card-img"
+              loading="lazy"
+              width="800"
+              height="400"
+            >
+          </div>
+        </div>
+        <div class="sub-card-body">
+          <h3 class="sub-card-title" id="planTitle">
+            اشتراك شات جي بي تي بلس (ChatGPT Plus)
+          </h3>
+          <p class="sub-card-type" id="planType">
+            <span>النوع:</span> ذكاء اصطناعي
+          </p>
+          <p class="sub-card-text" id="planDescription">
+            يساعدك في الدراسة، الكتابة، الأفكار والبرمجة مع تفعيل سريع ودعم عبر الواتساب.
+          </p>
+
+          <div class="sub-card-tags" id="planTags"></div>
+
+          <button class="btn btn-primary sub-card-btn" type="button">
+            <span>تفاصيل الاشتراك</span>
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+      </article>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section class="section" id="features">
+      <header class="section-header features-header">
+        <div class="features-badge">مميزاتنا ✓</div>
+        <h2 class="section-title">لماذا تختار متجر الاشتراكات اليمني؟</h2>
+        <p class="section-subtitle">
+          نقدّم لك تجربة شراء اشتراكات رقمية مريحة ومناسبة للسوق اليمني.
+        </p>
+      </header>
+
+      <div class="features-grid">
+        <article class="feature-card feature-card--primary">
+          <div class="feature-icon-box">
+            YE
+          </div>
+          <h3 class="feature-title">طرق دفع محلية</h3>
+          <p class="feature-text">
+            نوفر اشتراكات رقمية موجهة لليمنيين مع طرق دفع تناسب أغلب المحافظات والمدن، بخطوات بسيطة وسريعة.
+          </p>
+        </article>
+
+        <article class="feature-card feature-card--bolt">
+          <div class="feature-icon-box">
+            <svg class="icon icon-lg" aria-hidden="true">
+              <use href="#i-bolt"></use>
+            </svg>
+          </div>
+          <h3 class="feature-title">تفعيل سريع للاشتراكات</h3>
+          <p class="feature-text">
+            بعد إتمام الدفع نقوم بتفعيل اشتراكك خلال وقت قصير جدًا، مع متابعة حالة الطلب خطوة بخطوة عبر الواتساب.
+          </p>
+        </article>
+
+        <article class="feature-card feature-card--price">
+          <div class="feature-icon-box feature-icon-box--price">
+            <svg class="icon icon-lg" aria-hidden="true">
+              <use href="#i-tag"></use>
+            </svg>
+          </div>
+          <h3 class="feature-title">أسعار منافسة وباقات متنوعة</h3>
+          <p class="feature-text">
+            نوفر باقات شهرية وسنوية وخيارات مشتركة تناسب الطلاب، المستقلين، وأصحاب المشاريع، بأسعار تنافسية مقارنة بالسوق.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- خطوات الطلب -->
+    <section class="section" id="steps">
+      <header class="section-header">
+        <h2 class="section-title">كيف تطلب الاشتراك من متجرنا؟</h2>
+        <p class="section-subtitle">
+          4 خطوات بسيطة للحصول على اشتراكك.
+        </p>
+      </header>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <div class="step-circle">
+            <span class="step-number">1</span>
+          </div>
+          <h3 class="step-title">اختر الاشتراك المناسب</h3>
+          <p class="step-text">
+            تصفّح اشتراكات شات جي بي تي، كانفا برو، دولينجو، جيميني، كاب كات واختر الباقة التي تناسبك.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-circle">
+            <span class="step-number">2</span>
+          </div>
+          <h3 class="step-title">قدّم طلبك عبر الواتساب</h3>
+          <p class="step-text">
+            تواصل معنا مباشرة على الواتساب وحدّد نوع الاشتراك المطلوب ورقم حسابك أو بريدك إن لزم.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-circle">
+            <span class="step-number">3</span>
+          </div>
+          <h3 class="step-title">أكمل عملية الدفع</h3>
+          <p class="step-text">
+            نرسل لك طرق الدفع المتاحة (حوالات محلية / محافظ إلكترونية)، وتختار الأنسب لك.
+          </p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-circle">
+            <span class="step-number">4</span>
+          </div>
+          <h3 class="step-title">استلم اشتراكك جاهزًا</h3>
+          <p class="step-text">
+            بعد تأكيد الدفع، نفعّل اشتراكك ونرسل لك بيانات الدخول أو طريقة التفعيل في أسرع وقت ممكن.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- لمن تناسب خدماتنا -->
+    <section class="section" id="audience">
+      <header class="section-header">
+        <h2 class="section-title">لمن تناسب خدماتنا؟</h2>
+        <p class="section-subtitle audience-description">
+          اختر الاشتراك حسب احتياجك: دراسة، تصميم، مونتاج أو تعلم لغات.
+        </p>
+      </header>
+
+      <div class="audience-grid">
+        <article class="card audience-card">
+          <h3 class="audience-title">من يستخدم شات جي بي تي بلس؟</h3>
+          <p class="audience-text">
+            مناسب للطلاب، المبرمجين، وصناع المحتوى لكتابة النصوص، الأفكار والتلخيصات بسرعة، ويساعد على إنجاز الدراسة والعمل بكفاءة أعلى.
+          </p>
+        </article>
+
+        <article class="card audience-card">
+          <h3 class="audience-title">من يستخدم كانفا برو؟</h3>
+          <p class="audience-text">
+            مناسب للمصممين وأصحاب المشاريع وصناع المحتوى لصنع شعارات وبوستات وبنرات وعروض بجودة عالية وبسهولة.
+          </p>
+        </article>
+
+        <article class="card audience-card">
+          <h3 class="audience-title">من يستخدم كاب كات برو؟</h3>
+          <p class="audience-text">
+            مناسب لصناع فيديوهات تيك توك ويوتيوب وإنستجرام لتحرير مقاطع احترافية بدون برامج معقدة، مباشرة من الجوال أو الحاسوب.
+          </p>
+        </article>
+
+        <article class="card audience-card">
+          <h3 class="audience-title">من يستخدم دوولينجو سوبر؟</h3>
+          <p class="audience-text">
+            مناسب للطلاب والمبتدئين والمسافرين لتحسين اللغة الإنجليزية وتعلم لغات جديدة بطريقة بسيطة وممتعة.
+          </p>
+        </article>
+
+        <article class="card audience-card">
+          <h3 class="audience-title">من يستخدم جميني (Google Gemini)؟</h3>
+          <p class="audience-text">
+            مناسب للمسوقين ورواد الأعمال والباحثين وصناع المحتوى لإنشاء نصوص، تحليل، ترجمة وأفكار تسويقية باستخدام ذكاء جوجل.
+          </p>
+        </article>
+
+        <article class="card audience-card">
+          <h3 class="audience-title">لمن تناسب باقي خدماتنا؟</h3>
+          <p class="audience-text">
+            تناسب من يريد تطوير مهاراته في الدراسة أو العمل أو المحتوى الرقمي، سواء كنت طالبًا أو موظفًا أو صاحب مشروع أو مستقلًا.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- قسم من نحن / رؤيتنا / رسالتنا / التزاماتنا -->
+    <section class="section" id="about">
+      <header class="section-header">
+        <h2 class="section-title">من نحن ورؤيتنا ورسالتنا والتزاماتنا</h2>
+      </header>
+
+      <p class="about-intro">
+        متجر يمني للاشتراكات الرقمية يوفّر خدمات موثوقة للدراسة والعمل وصناعة المحتوى، مع تركيز على احتياجات المستخدمين داخل اليمن.
+      </p>
+
+      <div class="about-grid">
+        <article class="about-card about-card--who" data-about="who">
+          <h3 class="about-card-title">من نحن</h3>
+          <p class="about-card-text">
+            فريق يمني مهتم بالتقنية نوفر اشتراكات لأهم أدوات الذكاء الاصطناعي والتصميم واللغات والمونتاج بتفعيل بسيط وآمن وطرق دفع محلية.
+          </p>
+        </article>
+
+        <article class="about-card" data-about="vision">
+          <div class="about-icon-wrap">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-eye"></use>
+            </svg>
+          </div>
+          <h3 class="about-card-title">رؤيتنا</h3>
+          <p class="about-card-text">
+            أن نكون الوجهة الأولى للاشتراكات الرقمية في اليمن، مع تجربة شراء سهلة، دعم سريع، وأسعار تنافسية تجعل الوصول لأقوى الأدوات العالمية متاحًا للجميع.
+          </p>
+        </article>
+
+        <article class="about-card" data-about="mission">
+          <div class="about-icon-wrap">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-flag"></use>
+            </svg>
+          </div>
+          <h3 class="about-card-title">رسالتنا</h3>
+          <p class="about-card-text">
+            تمكين الشباب والطلاب وروّاد الأعمال من استخدام أفضل المنصات العالمية في الدراسة، العمل الحر، وإنشاء المحتوى، من خلال اشتراكات موثوقة، تفعيل فوري، وخدمة عملاء قريبة من احتياجات السوق المحلي.
+          </p>
+        </article>
+
+        <article class="about-card" data-about="commitments">
+          <div class="about-icon-wrap about-icon-wrap--green">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-handshake"></use>
+            </svg>
+          </div>
+          <h3 class="about-card-title">التزاماتنا</h3>
+          <p class="about-card-text">
+            نلتزم بالشفافية في الأسعار، والوضوح في تفاصيل كل اشتراك، وتقديم دعم فني حقيقي قبل وبعد الشراء، مع ضمان استرداد في حال حدوث أي مشكلة في التفعيل لا يمكن حلّها، وبما يتوافق مع أنظمة الدفع في اليمن وخصوصية عملائنا.
+          </p>
+        </article>
+      </div>
+
+      <!-- آراء العملاء بعد رؤيتنا -->
+      <div class="testimonials">
+        <div class="testimonials-header">
+          <h3 class="testimonials-title">آراء عملائنا</h3>
+          <p class="testimonials-subtitle">
+            بعض التجارب الحقيقية لعملاء اشتروا من متجرنا للاشتراكات الرقمية واستفادوا من الخدمات المقدمة.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <h4 class="testimonial-name">أحمد – طالب جامعي</h4>
+            <p class="testimonial-role">اشتراك ChatGPT Plus</p>
+            <p class="testimonial-stars">★★★★★</p>
+            <p class="testimonial-text">
+              "الاشتراك ساعدني كثيرًا في إعداد الأبحاث والتقارير الجامعية، والتفعيل كان سريع جدًا والدعم متعاون."
+            </p>
+          </article>
+
+          <article class="testimonial-card">
+            <h4 class="testimonial-name">سارة – صانعة محتوى</h4>
+            <p class="testimonial-role">اشتراك Canva Pro + CapCut Pro</p>
+            <p class="testimonial-stars">★★★★★</p>
+            <p class="testimonial-text">
+              "صرت أجهز التصاميم والفيديوهات للحسابات بسرعة وجودة عالية، كل شيء تم عبر الواتساب والدفع كان سلس."
+            </p>
+          </article>
+
+          <article class="testimonial-card">
+            <h4 class="testimonial-name">محمد – صاحب مشروع صغير</h4>
+            <p class="testimonial-role">اشتراك Gemini + ChatGPT</p>
+            <p class="testimonial-stars">★★★★☆</p>
+            <p class="testimonial-text">
+              "أستخدم الاشتراكات في كتابة العروض التسويقية وتحليل البيانات، الخدمة ممتازة والأسعار مناسبة مقارنة بالسوق."
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA أخير -->
+    <section class="footer-cta">
+      <div class="footer-cta-inner">
+        <h2 class="footer-cta-title">جاهز للحصول على اشتراكك الرقمي؟</h2>
+        <p class="footer-cta-text">
+          تواصل معنا الآن واحصل على اشتراكك بأسعار مناسبة وتفعيل سريع داخل اليمن.
+        </p>
+
+        <div class="footer-cta-actions">
+          <a href="https://wa.me/" class="btn btn-whatsapp" rel="noopener" target="_blank">
+            <svg class="icon" aria-hidden="true">
+              <use href="#i-whatsapp"></use>
+            </svg>
+            <span>تواصل عبر واتساب الآن</span>
+          </a>
+          <a href="#subscriptions" class="btn btn-outline">
+            <span>تصفح الاشتراكات</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- الفوتر -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3 class="footer-brand-title">متجر الاشتراكات اليمني</h3>
+          <p class="footer-brand-text">
+            نسهّل عليك الحصول على اشتراكاتك الرقمية بتفعيل موثوق ودعم مستمر داخل اليمن.
+          </p>
+        </div>
+
+        <div class="footer-cols">
+          <div class="footer-col">
+            <h4 class="footer-col-title">روابط سريعة</h4>
+            <ul class="footer-links">
+              <li><a href="#">الرئيسية</a></li>
+              <li><a href="#subscriptions">الاشتراكات</a></li>
+              <li><a href="#about">من نحن</a></li>
+              <li><a href="#audience">لمن تناسب خدماتنا</a></li>
+              <li><a href="#steps">طريقة الطلب</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">الاشتراكات</h4>
+            <ul class="footer-links">
+              <li><a href="#subscriptions">ChatGPT Plus</a></li>
+              <li><a href="#subscriptions">Canva Pro</a></li>
+              <li><a href="#subscriptions">Duolingo Super</a></li>
+              <li><a href="#subscriptions">Google Gemini</a></li>
+              <li><a href="#subscriptions">CapCut Pro</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">تواصل معنا</h4>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon">📍</span>
+              <span>صنعاء – الرضا</span>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon">📍</span>
+              <span>عدن – خور مكسر</span>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon">📞</span>
+              <span>+96774786786</span>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon">⏱</span>
+              <span>الدوام: 24/7</span>
+            </div>
+
+            <div class="footer-social">
+              <a href="https://wa.me/96774786786" class="footer-social-link" aria-label="واتساب" rel="noopener" target="_blank">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-whatsapp"></use>
+                </svg>
+              </a>
+              <a href="https://instagram.com/USER_NAME" class="footer-social-link" aria-label="انستقرام" rel="noopener" target="_blank">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-instagram"></use>
+                </svg>
+              </a>
+              <a href="https://facebook.com/USER_NAME" class="footer-social-link" aria-label="فيسبوك" rel="noopener" target="_blank">
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-facebook"></use>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2025 متجر الاشتراكات اليمني. جميع الحقوق محفوظة.</span>
+        <span>الخصوصية • الشروط والأحكام</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- زر واتساب (تحدث إلينا) يسار / زر أعلى الصفحة يمين -->
+  <div class="floating-whatsapp">
+    <a href="https://wa.me/" class="float-btn float-btn-whatsapp" rel="noopener" target="_blank">
+      <svg class="icon" aria-hidden="true">
+        <use href="#i-whatsapp"></use>
+      </svg>
+      <span>تحدث معنا</span>
+    </a>
+  </div>
+
+  <div class="floating-top">
+    <button type="button" class="float-btn float-btn-top" id="scrollTopBtn" aria-label="الرجوع للأعلى">
+      ↑
+    </button>
+  </div>
+
+  <!-- Drawer -->
+  <div class="backdrop" id="backdrop"></div>
+
+  <nav class="drawer" id="drawer" aria-label="القائمة الجانبية">
+    <div class="drawer-header">
+      <span class="logo-text">متجر الاشتراكات اليمني</span>
+      <button class="icon-btn" id="closeMenu" aria-label="إغلاق القائمة">
+        <svg class="icon icon-lg" aria-hidden="true">
+          <use href="#i-close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <ul class="drawer-nav">
+      <li><a href="#">الرئيسية</a></li>
+      <li><a href="#subscriptions">الاشتراكات</a></li>
+      <li><a href="#features">مميزاتنا</a></li>
+      <li><a href="#steps">طريقة الطلب</a></li>
+      <li><a href="#audience">لمن تناسب خدماتنا</a></li>
+      <li><a href="#about">من نحن</a></li>
+      <li><a href="#">الأسئلة الشائعة</a></li>
+    </ul>
+
+    <div class="drawer-footer">
+      <a href="https://wa.me/" class="btn btn-whatsapp" rel="noopener" target="_blank">
+        <svg class="icon" aria-hidden="true">
+          <use href="#i-whatsapp"></use>
+        </svg>
+        <span>تواصل واتساب</span>
+      </a>
+    </div>
+  </nav>
+
+  <script>
+    // القائمة الجانبية
+    const openBtn = document.getElementById("openMenu");
+    const closeBtn = document.getElementById("closeMenu");
+    const drawer = document.getElementById("drawer");
+    const backdrop = document.getElementById("backdrop");
+
+    function openDrawer() {
+      drawer.classList.add("open");
+      backdrop.classList.add("active");
+      document.body.classList.add("no-scroll");
+    }
+    function closeDrawer() {
+      drawer.classList.remove("open");
+      backdrop.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    }
+
+    if (openBtn) openBtn.addEventListener("click", openDrawer);
+    if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
+    if (backdrop) backdrop.addEventListener("click", closeDrawer);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && drawer.classList.contains("open")) {
+        closeDrawer();
+      }
+    });
+
+    // بيانات الاشتراكات
+    const plans = {
+      chatgpt: {
+        img: "images/chatgpt.jpg",
+        mediaAlt: "صورة اشتراك ChatGPT Plus",
+        title: "اشتراك شات جي بي تي بلس (ChatGPT Plus)",
+        type: "ذكاء اصطناعي",
+        desc: "يساعدك في الدراسة، الكتابة، الأفكار والبرمجة مع تفعيل سريع ودعم عبر الواتساب.",
+        tags: ["GPT-4 كامل", "تفعيل فوري", "دعم فني"]
+      },
+      gemini: {
+        img: "images/gemini.jpg",
+        mediaAlt: "صورة اشتراك Gemini",
+        title: "اشتراك Gemini المتقدم من جوجل",
+        type: "ذكاء اصطناعي",
+        desc: "استفد من نماذج Gemini القوية لمهام البحث، والتحليل، وكتابة المحتوى المتقدم، وربط أدوات جوجل المختلفة في مكان واحد.",
+        tags: ["تكامل مع خدمات جوجل", "مناسب للأعمال", "دعم وثائق كبيرة"]
+      },
+      duolingo: {
+        img: "images/duolingo.jpg",
+        mediaAlt: "صورة اشتراك Duolingo Super",
+        title: "اشتراك Duolingo Super",
+        type: "تعليم لغات",
+        desc: "تعلم اللغات بأسلوب ممتع بدون إعلانات، مع قلوب غير محدودة وتمارين مراجعة متقدمة تساعدك على تثبيت الكلمات والقواعد بسهولة.",
+        tags: ["بدون إعلانات", "قلوب غير محدودة", "مستويات وتحديات إضافية"]
+      },
+      canva: {
+        img: "images/canva-pro.jpg",
+        mediaAlt: "صورة اشتراك Canva Pro",
+        title: "اشتراك Canva Pro الاحترافي",
+        type: "تصميم",
+        desc: "صمم شعاراتك ومنشورات التواصل الاجتماعي والعروض التقديمية بسهولة مع قوالب جاهزة وعناصر مدفوعة ومشاركة الفرق.",
+        tags: ["قوالب احترافية", "إزالة خلفية الصور", "مكتبة ضخمة من العناصر"]
+      },
+      capcut: {
+        img: "images/capcut-pro.jpg",
+        mediaAlt: "صورة اشتراك CapCut Pro",
+        title: "اشتراك CapCut Pro لتحرير الفيديو",
+        type: "مونتاج فيديو",
+        desc: "حرر مقاطع الفيديو بجودة عالية مع فلاتر وميزات متقدمة بدون علامة مائية، مناسب لصناع المحتوى على تيك توك ويوتيوب.",
+        tags: ["بدون علامة مائية", "فلاتر ومؤثرات", "تصدير بجودة عالية"]
+      }
+    };
+
+    const tabButtons = document.querySelectorAll("#planTabs .chip");
+    const imgEl = document.getElementById("planImage");
+    const titleEl = document.getElementById("planTitle");
+    const typeEl = document.getElementById("planType");
+    const descEl = document.getElementById("planDescription");
+    const tagsContainer = document.getElementById("planTags");
+
+    function renderPlan(key) {
+      const plan = plans[key];
+      if (!plan) return;
+
+      imgEl.src = plan.img;
+      imgEl.alt = plan.mediaAlt || ("صورة اشتراك " + plan.title);
+      titleEl.textContent = plan.title;
+      typeEl.innerHTML = "<span>النوع:</span> " + plan.type;
+      descEl.textContent = plan.desc;
+
+      tagsContainer.innerHTML = "";
+      plan.tags.forEach((t) => {
+        const span = document.createElement("span");
+        span.className = "chip-soft";
+        span.textContent = t;
+        tagsContainer.appendChild(span);
+      });
+    }
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        tabButtons.forEach((b) => b.classList.remove("chip-active"));
+        btn.classList.add("chip-active");
+        renderPlan(btn.dataset.plan);
+      });
+    });
+
+    // افتراضي: شات جي بي تي
+    renderPlan("chatgpt");
+
+    // تفعيل بطاقات عنّا
+    const aboutCards = document.querySelectorAll(".about-card");
+    function setActiveAbout(card) {
+      aboutCards.forEach((c) => c.classList.remove("about-card--active"));
+      if (card) card.classList.add("about-card--active");
+    }
+    aboutCards.forEach((card) => {
+      card.addEventListener("click", () => setActiveAbout(card));
+    });
+    const defaultCard = document.querySelector('.about-card[data-about="vision"]');
+    setActiveAbout(defaultCard);
+
+    // زر الرجوع للأعلى
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    if (scrollTopBtn) {
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+  </script>
+</body>
+</html>
